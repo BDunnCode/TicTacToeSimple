@@ -23,7 +23,7 @@ function boxClicked(e) {
     e.target.innerText = currentPlayer;
 
     if (playerHasWon() !== false) {
-      playerText = `${currentPlayer} has won!`;
+      playerText.innerText = `${currentPlayer} has won!`;
       let winning_blocks = playerHasWon();
 
       winning_blocks.map(
@@ -65,9 +65,10 @@ function restart() {
 
   boxes.forEach((box) => {
     box.innerText = "";
+    box.style.backgroundColor = "";
   });
 
-  playerText = "Tic Tac Toe";
+  playerText.innerText = "Tic Tac Toe";
 
   currentPlayer = X_TEXT;
 }
